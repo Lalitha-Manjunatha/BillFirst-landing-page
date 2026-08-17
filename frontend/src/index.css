@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 22 71% 4%;
+        --foreground: 36 100% 95%;
+        --card: 24 49% 8%;
+        --card-foreground: 36 100% 95%;
+        --popover: 24 49% 8%;
+        --popover-foreground: 36 100% 95%;
+        --primary: 41 100% 64%;
+        --primary-foreground: 22 71% 4%;
+        --secondary: 24 49% 8%;
+        --secondary-foreground: 36 100% 95%;
+        --muted: 26 30% 14%;
+        --muted-foreground: 28 20% 47%;
+        --accent: 28 100% 55%;
+        --accent-foreground: 22 71% 4%;
+        --destructive: 8 62% 47%;
+        --destructive-foreground: 36 100% 95%;
+        --border: 30 42% 15%;
+        --input: 30 42% 15%;
+        --ring: 41 100% 64%;
+        --radius: 0.75rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-void text-cream font-sans antialiased;
+        font-feature-settings: "lnum" 1, "tnum" 1;
+    }
+    ::selection {
+        background: #FFD447;
+        color: #120802;
+    }
+}
+
+@layer utilities {
+    .tnum {
+        font-variant-numeric: lining-nums tabular-nums;
+        font-feature-settings: "lnum" 1, "tnum" 1;
+    }
+    .glass {
+        background: rgba(255, 138, 26, 0.10);
+        border: 1px solid rgba(255, 196, 71, 0.16);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    .glass-tint {
+        background: rgba(18, 8, 2, 0.30);
+    }
+    .text-gradient-sona {
+        background: linear-gradient(120deg, #FFD447 10%, #FF7A1A 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .grain::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: 60;
+        pointer-events: none;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

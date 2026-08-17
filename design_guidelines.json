@@ -1,0 +1,204 @@
+{
+  "theme": "dark",
+  "project": "BillFirst",
+  "mascot": "Sona",
+  "typography": {
+    "headings": {
+      "fontFamily": "Space Grotesk",
+      "weights": ["bold", "black"],
+      "usage": "Display headlines. Line-height: tight (leading-none)."
+    },
+    "body": {
+      "fontFamily": "Plus Jakarta Sans",
+      "weights": ["regular", "medium"],
+      "usage": "Body, UI, numerals. Line-height: relaxed."
+    },
+    "features": "Tabular lining figures for all currency/numerals (font-feature-settings 'lnum' 1, 'tnum' 1).",
+    "type_scale": {
+      "h1": "text-5xl md:text-7xl tracking-tighter leading-none",
+      "h2": "text-4xl md:text-5xl tracking-tight leading-tight",
+      "h3": "text-2xl md:text-3xl tracking-tight",
+      "body": "text-base md:text-lg leading-relaxed",
+      "small": "text-sm tracking-wide"
+    }
+  },
+  "colors": {
+    "background": {
+      "void": "#120802",
+      "elevated": "#1D110A",
+      "vignette": "#2A140A"
+    },
+    "text": {
+      "primary": "#FFF4E3",
+      "secondary": "#C9B8A6",
+      "muted": "#8A7565"
+    },
+    "brand": {
+      "sona_yellow": "#FFD447",
+      "sona_orange": "#FF7A1A",
+      "rim_dark_start": "#C24A0E",
+      "rim_dark_end": "#170901"
+    },
+    "glass": {
+      "fill": "rgba(255,138,26,0.12)",
+      "border": "rgba(255,196,71,0.18)",
+      "blur": "backdrop-blur-xl",
+      "tint_overlay": "rgba(18,8,2,0.24)"
+    },
+    "alerts": {
+      "error_gradient": "linear-gradient(to right, #C43B2E, #34100A)"
+    },
+    "forbidden": [
+      "pure black (#000000) or pure white (#FFFFFF) fills",
+      "green as 'good' signal",
+      "purple/violet gradients"
+    ]
+  },
+  "design_rules": {
+    "lighting": "One implied warm light source.",
+    "glow": "Glow-as-signal, not decoration. Only use glow for active states, primary CTA, or the Sona mascot.",
+    "voice": "Cheeky accountability, no shame. Sona is a coach, not a judge. Warm and playful."
+  },
+  "motion_specs": {
+    "framer_motion": "Mandatory for scroll reveals, micro-interactions.",
+    "lenis": "Smooth scrolling required for the entire page.",
+    "mascot_animation": "Hops have anticipation/squash-and-stretch. Idle breathing glow pulse.",
+    "hero_reveal": "Large kinetic hero with masked line-by-line reveal.",
+    "parallax": "Subtle parallax/3D hero moment.",
+    "frequency": "Restraint over frequency. Do not over-animate; rely on smooth reveals and state changes."
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "layout": "Large cinematic hero. Asymmetric or split layout.",
+      "components": [
+        "Kinetic Headline (Space Grotesk, line-by-line masked reveal)",
+        "Sona Video Loop (provided Sona coin sprite video)",
+        "Waitlist Email Signup Form with Sonner success toast",
+        "Subtle 3D/Parallax background elements"
+      ]
+    },
+    {
+      "id": "marquee",
+      "name": "Editorial Marquee",
+      "layout": "Full width, slow continuous horizontal scroll.",
+      "components": [
+        "Brand statements / partner logos with tabular figures or Space Grotesk"
+      ]
+    },
+    {
+      "id": "features",
+      "name": "Features Grid",
+      "layout": "Bento Grid Protocol. Asymmetrical, varying card sizes.",
+      "components": [
+        "Glass panels (fill rgba(255,138,26,0.12), border rgba(255,196,71,0.18), backdrop-blur 16-24px)",
+        "Glow Meter: Canonical brand component 'GLOW 82' with horizontal fill bar."
+      ]
+    },
+    {
+      "id": "manifesto",
+      "name": "How it Works / Manifesto",
+      "layout": "Vertical scroll story. Wide left margin.",
+      "components": [
+        "Numbered chapters with massive Space Grotesk numerals",
+        "Scroll-triggered reveals (framer-motion whileInView)"
+      ]
+    },
+    {
+      "id": "testimonials",
+      "name": "Testimonials",
+      "layout": "Horizontal scroll or bento layout.",
+      "components": [
+        "Portrait photos",
+        "Warm, cheeky coach copy",
+        "Glassmorphic cards"
+      ]
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing",
+      "layout": "Side-by-side comparison or tiered cards.",
+      "components": [
+        "Recommended plan highlighted with implied warm light source/glow",
+        "No green checkmarks; use brand yellow/orange"
+      ]
+    },
+    {
+      "id": "faq",
+      "name": "FAQ",
+      "layout": "Accordion list. Minimalist.",
+      "components": [
+        "Accordion customized with dark cinematic styling and plus/minus icons"
+      ]
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "layout": "Massive typography for final CTA, simple column links.",
+      "components": [
+        "Large 'BillFirst' mark",
+        "Social/Legal links"
+      ]
+    }
+  ],
+  "components_to_build": [
+    {
+      "name": "GlowMeter",
+      "description": "Component showing 'GLOW 82' with a horizontal fill bar (Sona orange to yellow gradient)."
+    },
+    {
+      "name": "GlassPanel",
+      "description": "Container using brand glass constraints. Must include tint overlay behind text."
+    },
+    {
+      "name": "WaitlistForm",
+      "description": "Email input + submit button. Connects to sonner for 'Joined waitlist' toast upon successful submission to database."
+    }
+  ],
+  "image_urls": {
+    "testimonials": [
+      {
+        "url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwZmFjZXxlbnwwfHx8fDE3ODY5NTU2MTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Smiling woman"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1506863530036-1efeddceb993?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwyfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwZmFjZXxlbnwwfHx8fDE3ODY5NTU2MTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Woman portrait"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1587397845856-e6cf49176c70?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHBob3RvZ3JhcGh5JTIwZmFjZXxlbnwwfHx8fDE3ODY5NTU2MTR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Man portrait"
+      }
+    ],
+    "textures": [
+      {
+        "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGRhcmslMjBjaW5lbWF0aWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc4Njk1NTYxNHww&ixlib=rb-4.1.0&q=85",
+        "description": "Dark cinematic texture"
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Use .jsx or .js file extensions exclusively for React components; do NOT use .tsx.",
+    "Implement Lenis for smooth scrolling in the main App or layout file.",
+    "Use framer-motion for animations. Import components from 'framer-motion' and use them with 'motion.div', etc.",
+    "For the Sona video loop in the hero, use an HTML5 <video> tag with autoPlay loop muted playsInline.",
+    "Strictly follow the brand color palette. Map these to tailwind config colors in tailwind.config.js.",
+    "Implement the email waitlist form saving to a basic backend or mocked logic and trigger a Sonner toast upon success."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic outputs. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (16-24px blur as per brand guidelines).",
+    "You MUST NOT apply universal transition (e.g. transition: all). Always add transitions for specific interactive elements.",
+    "You MUST NOT center align the app container (.App { text-align: center; }).",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations.",
+    "NEVER use AI assistant emoji characters.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations separate good from extraordinary.",
+    "All interactive and key informational elements MUST include a data-testid attribute in kebab-case."
+  ]
+}
