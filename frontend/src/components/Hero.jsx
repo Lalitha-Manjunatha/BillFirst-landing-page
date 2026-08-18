@@ -55,7 +55,6 @@ const Hero = () => {
             className="mb-8 flex items-center gap-3"
             data-testid="hero-eyebrow"
           >
-            <span className="h-2 w-2 rounded-full bg-sona-yellow animate-glow-pulse shadow-[0_0_10px_rgba(255,212,71,0.9)]" />
             <span className="text-xs font-semibold tracking-[0.3em] text-sand">MASCOT / 01 — MEET SONA</span>
           </motion.div>
 
